@@ -15,7 +15,7 @@ describe OmniAuth::Strategies::Bitbucket2 do
 
   context "client options" do
     it 'should have correct site' do
-      subject.options.client_options.site.should eq("https://bitbucket.org")
+      subject.options.client_options.site.should eq("https://api.bitbucket.org/2.0")
     end
 
     it 'should have correct authorize url' do
