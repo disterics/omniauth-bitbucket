@@ -21,7 +21,7 @@ gem install omniauth-bitbucket2
 
 ```ruby
 use OmniAuth::Builder do
-  provider :bitbucket2, ENV['BITBUCKET_KEY'], ENV['BITBUCKET_SECRET']
+  provider :bitbucket, ENV['BITBUCKET_KEY'], ENV['BITBUCKET_SECRET']
 end
 ```
 
@@ -29,7 +29,7 @@ If using Rails, add an initializer `config/initializers/omniauth.rb`:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :bitbucket2, 'BITBUCKET_KEY', 'BITBUCKET_SECRET'
+  provider :bitbuckett, 'BITBUCKET_KEY', 'BITBUCKET_SECRET'
 end
 ```
 
