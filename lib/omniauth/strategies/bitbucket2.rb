@@ -10,6 +10,10 @@ module OmniAuth
         :authorize_url => 'https://bitbucket.org/site/oauth2/authorize',
         :token_url => 'https://bitbucket.org/site/oauth2/access_token'
       }
+      
+      def request_phase
+        super
+      end
 
       def authorize_params
         super.tap do |params|
