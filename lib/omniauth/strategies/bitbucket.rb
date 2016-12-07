@@ -2,7 +2,7 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class Bitbucket2 < OmniAuth::Strategies::OAuth2
+    class Bitbucket < OmniAuth::Strategies::OAuth2
       option :name, 'bitbucket'
 
       option :client_options, {
@@ -10,7 +10,7 @@ module OmniAuth
         :authorize_url => 'https://bitbucket.org/site/oauth2/authorize',
         :token_url => 'https://bitbucket.org/site/oauth2/access_token'
       }
-      
+
       def request_phase
         super
       end
@@ -23,6 +23,10 @@ module OmniAuth
             end
           end
         end
+      end
+
+      def callback_url
+        full_host + script_name + callback_path
       end
 
       uid { raw_info['uuid'].to_s }
@@ -47,10 +51,6 @@ module OmniAuth
       def primary_email
         primary = emails.find{ |i| i['is_primary'] && i['is_confirmed'] }
         primary && primary['email'] || nil
-      end
-      
-      def callback_url
-        full_host + script_name + callback_path
       end
 
       def emails
