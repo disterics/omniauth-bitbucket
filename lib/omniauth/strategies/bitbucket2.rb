@@ -44,6 +44,10 @@ module OmniAuth
         primary = emails.find{ |i| i['is_primary'] && i['is_confirmed'] }
         primary && primary['email'] || nil
       end
+      
+      def callback_url
+        full_host + script_name + callback_path
+      end
 
       def emails
         email_response = access_token.get('user/emails').parsed
@@ -53,4 +57,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'bitbucket', 'Bitbucket2'
+OmniAuth.config.add_camelization 'bitbucket', 'Bitbucket'
