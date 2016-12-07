@@ -1,5 +1,5 @@
 module OmniAuth
-  module Bitbucket2
+  module Bitbucket
     VERSION = "1.0.0"
   end
 end

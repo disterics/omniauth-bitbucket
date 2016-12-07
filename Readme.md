@@ -1,4 +1,4 @@
-# OmniAuth Bitbucket2
+# OmniAuth Bitbucket
 
 This is the OmniAuth strategy for authenticating to [Bitbucket](https://bitbucket.org).
 To use it, you'll need to signup for an OAuth2 Application ID and Secret on the Bitbucket Application Page.
@@ -8,13 +8,13 @@ To use it, you'll need to signup for an OAuth2 Application ID and Secret on the 
 Add dependency to your Gemfile:
 
 ```
-gem 'omniauth-bitbucket2'
+gem 'omniauth-bitbucket'
 ```
 
 Or install manually:
 
 ```
-gem install omniauth-bitbucket2
+gem install omniauth-bitbucket
 ```
 
 ## Basic Usage

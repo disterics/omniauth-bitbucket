@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.email       = ["birmacher@gmail.com"]
   gem.description = %q{OmniAuth strategy for Bitbucket.}
   gem.summary     = %q{OmniAuth strategy for Bitbucket.}
-  gem.homepage    = "https://github.com/birmacher/omniauth-bitbucket2"
+  gem.homepage    = "https://github.com/leanstack/omniauth-bitbucket2"
   gem.license     = 'MIT'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

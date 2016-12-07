@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::Bitbucket2 do
+describe OmniAuth::Strategies::Bitbucket do
   let(:access_token) { double('AccessToken', :options => {}) }
   let(:parsed_response) { double('ParsedResponse') }
   let(:response) { double('Response', :parsed => parsed_response) }
 
   subject do
-    OmniAuth::Strategies::Bitbucket2.new({})
+    OmniAuth::Strategies::Bitbucket.new({})
   end
 
   before(:each) do

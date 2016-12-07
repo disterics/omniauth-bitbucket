@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in omniauth-bitbucket2.gemspec
+# Specify your gem's dependencies in omniauth-bitbucket.gemspec
 gemspec
 
 group :development, :test do
